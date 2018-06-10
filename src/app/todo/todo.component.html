@@ -1,0 +1,9 @@
+<h1> TODO LIST</h1>
+<div class="cards-container" layout-wrap layout="row">
+    <div flex="30" *ngFor="let todo of todos" > 
+      <app-show-todo [todo]="todo" (onDeleteClick)="deleteItem($event)" (completeClick)="complete($event)"></app-show-todo>
+    </div>
+
+    <app-add-todo> </app-add-todo>
+</div>
+
